@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
+import Visitas from "./Visitas"; // importa tu contador
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -73,6 +74,7 @@ function App() {
   return (
     <div style={{ padding: "2rem" }}>
       <h1>Mi DApp EVM</h1>
+      <Visitas /> {/* AQUÍ se carga tu contador */}
       {!account ? (
         <button onClick={connectWallet}>Conectar Wallet</button>
       ) : (
